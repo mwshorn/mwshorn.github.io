@@ -153,12 +153,18 @@ main {
         display: inline-block;
         width: 30%;
         vertical-align: bottom;
-        font-size: 24px;
+        font-size: 20px;
+    }
+
+    .spacer {
+        display: inline-block;
+        width: 8%;
     }
 
     .img-container {
-        width: 60%;
+        width: 50%;
         vertical-align: bottom;
+        display: inline-block;
     }
 
     .text-container {
