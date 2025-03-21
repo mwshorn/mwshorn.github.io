@@ -50,6 +50,21 @@ body {
     margin-right: 20px;
 }
 
+#click-me {
+    color: #333333;
+    font-family: 'Space Mono';
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#menu-bars:hover {
+    cursor: pointer;
+}
+
+#click-me:hover {
+    cursor: pointer;
+}
+
 .nav-bar ul {
     margin: 0;
     padding: 0;
