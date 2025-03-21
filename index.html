@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-...your-integrity-code..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav class="mobile-nav">
+        <ul class="mobile-nav-items">
+            <li class="mobile-nav-item"><a href="#bio">Bio</a></li>
+            <li class="mobile-nav-item"><a href="#projects">Projects</a></li>
+            <li class="mobile-nav-item"><a href="#skills">Skills</a></li>
+            <li class="mobile-nav-item"><a href='#contact'>Contact</a></li>
+          </ul>
+    </nav>
+
+    <div class="content">
+        <nav class="nav-bar">
+            <div class="logo-container">
+            <h1 id="logo">dev.matthorn.net</h1>
+            </div>
+            <div class="nav-container">
+            <i class="fa fa-bars" id="menu-bars" aria-hidden="true"></i>
+            <ul class="navigation-items">
+              <li class="navigation-item"><a href="#bio">Bio</a></li>
+              <li class="navigation-item"><a href="#projects">Projects</a></li>
+              <li class="navigation-item"><a href="#skills">Skills</a></li>
+              <li class="navigation-item"><a href='#contact'>Contact</a></li>
+            </ul>
+            </div>
+        </nav>
+
+    <main class="desktop">
+        <div class="text-container">
+        <h2>Hello, I'm Matt. A developer based in London.</h2>
+        <p>I'm a self-taught software developer with a professional background in music. 
+            While freelancing as a horn player, I built a program in python to automate my invoicing, 
+            which saved me a day each month.</p>
+        <p>Stimulated by problem solving, I am currently working on 
+            a node.js tool to reformat Bible passages to cleanly display only the original text.</p>
+        <p>I am currently looking for a new role.</p>
+        <a href="https://www.linkedin.com/in/matthew-horn-2b0499133/">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+    
+        <a href="https://github.com/mwshorn">
+            <i class="fab fa-github"></i> GitHub
+        </a>
+        </div>
+        <div class="img-container">
+            <img src="./resources/images/transparent-profile-img.png">
+        </div>
+    </main>
+        
+    <main class="mobile">
+        <div class="tag-line">
+            <h2>Hello, I'm Matt. A developer based in London.</h2>
+        </div>
+        <div class="img-container">
+            <img src="./resources/images/transparent-profile-img.png">
+        </div>
+        <div class="text-container">
+            <p>I'm a self-taught software developer with a professional background in music. 
+                While freelancing as a horn player, I built a program in python to automate my invoicing, 
+                which saved me a day each month.</p>
+            <p>Stimulated by problem solving, I am currently working on 
+                a node.js tool to reformat Bible passages to cleanly display only the original text.</p>
+            <p>I am currently looking for a new role.</p>
+            <a href="https://www.linkedin.com/in/matthew-horn-2b0499133/">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+        
+            <a href="https://github.com/mwshorn">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+        </div>
+    </main>
+    <footer>
+    <div class="horn-simulator" id="projects">
+        <h2 class='title'>Horn Simulator</h2>
+        <p id='demo'>Follow these instructions to simulate the valve movement on a French horn:</p>
+        <p>1. Place your left index finger on the keyboard's letter 'E'.</p>
+        <p>2. Place your two corresponding fingers on 'W' and 'Q'.</p>
+        <p>3. Your fingers are now in position! Press down these keys with those fingers to press down the valves.</p>
+
+            <div class='img-container-2'>
+                <img id='french-horn' src="./resources/images/french-horn.png">
+                <img id='valve-1' src="./resources/images/valve-1.png">
+                <img id='valve-2' src="./resources/images/valve-2.png">
+                <img id='valve-3' src="./resources/images/valve-3.png">
+                <img id='valve-1-red' src="./resources/images/valve-1-red.png">
+                <img id='valve-2-red' src="./resources/images/valve-2-red.png">
+                <img id='valve-3-red' src="./resources/images/valve-3-red.png">
+            </div>
+    </div>
+    <div class="contact-form" id="contact">
+        <h2>Contact Me</h2>
+        <form id="contactForm" action="/submit" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="(required)" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="(required)" required>
+            
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="(required)" required>
+            
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Type your message here..." rows="5" required></textarea>
+            
+            <!-- Custom CAPTCHA -->
+            <div id="captcha-container">
+                <label for="captcha-answer">What is the colour of grass<span id="captcha-question"></span>?</label>
+                <input type="text" id="captcha-answer" placeholder="CAPTCHA" name="green" required>
+            </div>
+            
+            <button type="submit">Send Message</button>
+        </form>
+        </div>
+        </footer>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>

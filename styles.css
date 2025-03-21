@@ -1,0 +1,357 @@
+body {
+    background-color: #f7b334;
+    color: #333333;
+    font-family: 'Space Mono';
+    letter-spacing: 0.05em;
+}
+
+.content {
+    background-color: #F5F5F5;
+    color: #333333;
+    font-family: 'Space Mono';
+    letter-spacing: 0.05em;
+    margin: 5%;
+    padding: 20px;
+    width: 90% - 40px;
+    height: auto;
+    border-radius: 1em;
+    display: inline-block;
+    align-self: center;
+    overflow: hidden;
+}
+
+/* NAVIGATION */
+
+.nav-bar {
+    display: inline-block;
+    width: 100%;
+    align-items: flex-end;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.logo-container {
+    width: 40%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+}
+
+.nav-container {
+    width: 60%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: right;
+}
+
+#menu-bars {
+    display: none;
+    font-size: 36px;
+    margin-right: 20px;
+}
+
+.nav-bar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-bar ul li {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.nav-bar ul li a {
+    color: #333333;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+}
+
+@media (max-width: 767px) {
+    #menu-bars {
+      display: inline-block;
+    }
+
+    .navigation-items {
+        display: none;
+    }
+  }
+
+.mobile-nav {
+    position: absolute;
+    display: none;
+    background-color: #f7b334;
+    color: #333333;
+    font-family: 'Space Mono';
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    text-align: center;
+}
+
+.mobile-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.mobile-nav ul li {
+    display: block;
+    margin-top: 30px;
+}
+
+.mobile-nav ul li a {
+    color: #333333;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+}
+
+/* MAIN CONTENT */
+
+main {
+    display: inline-block;
+    /* width: 100%; */
+}
+
+.desktop {
+    display: inline-block;
+}
+
+.mobile {
+    display: none;
+}
+
+.text-container {
+    display: inline-block;
+    width: 58%;
+    height: auto;
+    vertical-align: top;
+}
+
+.img-container {
+    display: inline-block;
+    width: 38%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+@media (max-width: 767px) {
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: inline-block;
+    }
+
+    .tag-line {
+        display: inline-block;
+        width: 30%;
+        vertical-align: bottom;
+        font-size: 24px;
+    }
+
+    .img-container {
+        width: 60%;
+        vertical-align: bottom;
+    }
+
+    .text-container {
+        width: 98%;
+    }
+  }
+
+img {
+    max-width: 100%;
+    max-height: auto;
+    object-fit: cover;
+    border-radius: 1em;
+}
+
+h1 {
+    font-family: 'Open Sauce Semibold';
+    letter-spacing: 0.02em;
+}
+
+a:hover {
+    color: #f7b334;
+}
+
+footer {
+    width: 100%;
+    display: block;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* HORN SIMULATOR */
+
+.horn-simulator {
+    display: inline-block;
+    width: 48%;
+    height: 600px;
+    vertical-align: top;
+    text-align: center;
+    background-color: #f7b334;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin-top: 30px;
+}
+
+.horn-simulator p {
+    text-align: left;
+}
+
+#demo{
+    text-align: center;
+    font-size: 16px;
+    margin-top: 15px;
+    color: #333333;
+    letter-spacing: 1px;
+  }
+
+.img-container-2 {
+width: 70%;
+height: auto;
+display: inline-block;
+margin: 0 auto;
+padding-bottom: 30px;
+text-align: center;
+position: relative;
+}
+
+.img-container-2 img {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: auto;
+object-fit: contain;
+max-width: 100%;
+max-height: auto;
+object-fit: cover;
+display: inline-block;
+}
+
+#valve-1 {
+display: block;
+}
+
+#valve-2 {
+display: block;
+}
+
+#valve-3 {
+display: block;
+}
+
+#valve-1-red {
+display: none;
+}
+
+#valve-2-red {
+display: none;
+}
+
+#valve-3-red {
+display: none;
+}
+
+/* CONTACT FORM */
+
+.contact-form {
+    background-color: #f7b334;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 48%;
+    max-width: 500px;
+    height: 600px;
+    margin-top: 30px;
+    display: inline-block;
+}
+
+@media (max-width: 767px) {
+    .horn-simulator {
+        width: 80%;
+    }
+    
+    .contact-form {
+        width: 80%;
+    }
+
+    footer {
+        text-align: center;
+    }
+}
+
+form label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+}
+
+form input, form textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333333;
+    color: #ccc;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: royalblue;
+    font-weight: bold;
+}
+
+#captcha-container {
+    margin-top: 20px;
+}
+
+.space-mono-regular {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.space-mono-bold {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.space-mono-regular-italic {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.space-mono-bold-italic {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+    font-family: 'Open Sauce Semibold';
+    src: url('./resources/fonts/open-sauce/OpenSauceSans-SemiBold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
