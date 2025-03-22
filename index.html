@@ -15,15 +15,15 @@
     <nav class="mobile-nav" id="id1">
         <ul class="mobile-nav-items">
             <li class="mobile-nav-item" type="button"
-            onclick="document.getElementById('id1').style.display = 'none'"><a href="#bio">Bio</a></li>
+            onclick="document.getElementById('id1').style.display = 'none'; document.body.style.overflowY = 'auto'"><a href="#bio">Bio</a></li>
             <li class="mobile-nav-item" type="button"
-            onclick="document.getElementById('id1').style.display = 'none'"><a href="#projects">Projects</a></li>
+            onclick="document.getElementById('id1').style.display = 'none'; document.body.style.overflowY = 'auto'"><a href="#projects">Projects</a></li>
             <li class="mobile-nav-item" type="button"
-            onclick="document.getElementById('id1').style.display = 'none'"><a href="#skills">Skills</a></li>
+            onclick="document.getElementById('id1').style.display = 'none'; document.body.style.overflowY = 'auto'"><a href="#skills">Skills</a></li>
             <li class="mobile-nav-item" type="button"
-            onclick="document.getElementById('id1').style.display = 'none'"><a href='#contact'>Contact</a></li>
+            onclick="document.getElementById('id1').style.display = 'none'; document.body.style.overflowY = 'auto'"><a href='#contact'>Contact</a></li>
             <li class="mobile-nav-item" type="button"
-            onclick="document.getElementById('id1').style.display = 'none'" id="click-me">x</li>
+            onclick="document.getElementById('id1').style.display = 'none'; document.body.style.overflowY = 'auto'" id="click-me">x</li>
           </ul>
     </nav>
 
@@ -34,7 +34,7 @@
             </div>
             <div class="nav-container">
             <i class="fa fa-bars" id="menu-bars" aria-hidden="true" type="button"
-            onclick="document.getElementById('id1').style.display = 'block'"></i>
+            onclick="document.getElementById('id1').style.display = 'block'; document.body.style.overflowY = 'hidden'"></i>
             <ul class="navigation-items">
               <li class="navigation-item"><a href="#bio">Bio</a></li>
               <li class="navigation-item"><a href="#projects">Projects</a></li>
@@ -45,7 +45,7 @@
         </nav>
 
     <main class="desktop">
-        <div class="text-container">
+        <div class="text-container" id="bio">
         <h2>Hello, I'm Matt. A developer based in London.</h2>
         <p>I'm a self-taught software developer with a professional background in music. 
             While freelancing as a horn player, I built a program in python to automate my invoicing, 
@@ -67,7 +67,7 @@
     </main>
         
     <main class="mobile">
-        <div class="tag-line">
+        <div class="tag-line" id="bio">
             <h2>Hello, I'm Matt. A developer based in London.</h2>
         </div>
         <div class="spacer"></div>
