@@ -14,7 +14,7 @@ body {
     letter-spacing: 0.05em;
     margin: 5%;
     padding: 20px;
-    width: 90% - 40px;
+    width: calc(90% - 40px);
     height: auto;
     border-radius: 1em;
     display: inline-block;
