@@ -113,26 +113,30 @@
         <form id="contactForm" action="https://formsubmit.co/el/yusone" method="POST">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" placeholder="(required)" required>
-            
+          
             <label for="email">Email</label>
             <input type="email" id="email" name="email" placeholder="(required)" required>
-            
+          
             <label for="subject">Subject</label>
             <input type="text" id="subject" name="subject" placeholder="(required)" required>
-            
+          
             <label for="message">Message</label>
             <textarea id="message" name="message" placeholder="Type your message here..." rows="5" required></textarea>
-            
-            <!-- Custom CAPTCHA -->
-            <div id="captcha-container">
-                <label for="captcha-answer">What is the colour of grass<span id="captcha-question"></span>?</label>
-                <input type="text" id="captcha-answer" placeholder="CAPTCHA" name="green" required>
+          
+            <!-- Google reCAPTCHA v2 -->
+            <div id="captcha">
+                <div
+                class="g-recaptcha"
+                data-sitekey="6LdpKIMUAAAAAPH4XLcypBTMPsV7eTWZrznHCndM"
+                data-theme="dark">
+                </div>
             </div>
-            <label class="HP" for="website">HP:</label>
-            <input class="HP" type="text" name="website" id="website">
+
             <button type="submit">Send Message</button>
-        </form>
+            </form>
         </div>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        
         </footer>
     </div>
 <script src="script.js"></script>
