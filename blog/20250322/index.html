@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="../../reset.css">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-...your-integrity-code..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav class="mobile-nav" id="id1">
+        <ul class="mobile-nav-items">
+            <li class="mobile-nav-item" type="button"
+            onclick="document.getElementById('id1').style.display = 'none'; document.body.style.overflowY = 'auto'"><a href="../../index.html#bio">Bio</a></li>
+            <li class="mobile-nav-item" type="button"
+            onclick="document.getElementById('id1').style.display = 'none'; document.body.style.overflowY = 'auto'"><a href="../../index.html#projects">Projects</a></li>
+            <li class="mobile-nav-item" type="button"
+            onclick="document.getElementById('id1').style.display = 'none'; document.body.style.overflowY = 'auto'"><a href="../index.html">Blog</a></li>
+            <li class="mobile-nav-item" type="button"
+            onclick="document.getElementById('id1').style.display = 'none'; document.body.style.overflowY = 'auto'"><a href='../../index.html#contact'>Contact</a></li>
+            <li class="mobile-nav-item" type="button"
+            onclick="document.getElementById('id1').style.display = 'none'; document.body.style.overflowY = 'auto'" id="click-me">x</li>
+          </ul>
+    </nav>
+
+    <div class="content">
+        <nav class="nav-bar">
+            <div class="logo-container">
+            <h1 id="logo">dev.matthorn.net</h1>
+            </div>
+            <div class="nav-container">
+            <i class="fa fa-bars" id="menu-bars" aria-hidden="true" type="button"
+            onclick="document.getElementById('id1').style.display = 'block'; document.body.style.overflowY = 'hidden'"></i>
+            <ul class="navigation-items">
+              <li class="navigation-item"><a href="../../index.html#bio">Bio</a></li>
+              <li class="navigation-item"><a href="../../index.html#projects">Projects</a></li>
+              <li class="navigation-item"><a href="../index.html">Blog</a></li>
+              <li class="navigation-item"><a href='../../index.html#contact'>Contact</a></li>
+            </ul>
+            </div>
+        </nav>
+
+    <main class="desktop" id="blog">    
+            <article>
+                <h2>Building this portfolio website</h2>
+                <p><small>Posted on <time datetime="2025-03-22">March 22, 2025</time> by Matt Horn</small></p>
+                <p>Please come back later to view this post.</p>
+            </article>
+    </main>
+        
+    <main class="mobile">
+        <article>
+            <h2>Building this portfolio website</h2>
+            <p><small>Posted on <time datetime="2025-03-22">March 22, 2025</time> by Matt Horn</small></p>
+            <p>Please come back later to view this post.</p>
+        </article>
+    </main>
+    </div>
+<script src="../script.js"></script>
+</body>
+</html>

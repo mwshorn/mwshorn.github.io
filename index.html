@@ -19,7 +19,7 @@
             <li class="mobile-nav-item" type="button"
             onclick="document.getElementById('id1').style.display = 'none'; document.body.style.overflowY = 'auto'"><a href="#projects">Projects</a></li>
             <li class="mobile-nav-item" type="button"
-            onclick="document.getElementById('id1').style.display = 'none'; document.body.style.overflowY = 'auto'"><a href="#skills">Skills</a></li>
+            onclick="document.getElementById('id1').style.display = 'none'; document.body.style.overflowY = 'auto'"><a href="./blog/index.html">Blog</a></li>
             <li class="mobile-nav-item" type="button"
             onclick="document.getElementById('id1').style.display = 'none'; document.body.style.overflowY = 'auto'"><a href='#contact'>Contact</a></li>
             <li class="mobile-nav-item" type="button"
@@ -38,12 +38,12 @@
             <ul class="navigation-items">
               <li class="navigation-item"><a href="#bio">Bio</a></li>
               <li class="navigation-item"><a href="#projects">Projects</a></li>
-              <li class="navigation-item"><a href="#skills">Skills</a></li>
+              <li class="navigation-item"><a href="./blog/index.html">Blog</a></li>
               <li class="navigation-item"><a href='#contact'>Contact</a></li>
             </ul>
             </div>
         </nav>
-
+    
     <main class="desktop">
         <div class="text-container" id="bio">
         <h2>Hello, I'm Matt. A developer based in London.</h2>
@@ -110,7 +110,7 @@
     </div>
     <div class="contact-form" id="contact">
         <h2>Contact Me</h2>
-        <form id="contactForm" action="/submit" method="POST">
+        <form id="contactForm" action="https://formsubmit.co/el/yusone" method="POST">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" placeholder="(required)" required>
             
@@ -128,7 +128,8 @@
                 <label for="captcha-answer">What is the colour of grass<span id="captcha-question"></span>?</label>
                 <input type="text" id="captcha-answer" placeholder="CAPTCHA" name="green" required>
             </div>
-            
+            <label class="HP" for="website">HP:</label>
+            <input class="HP" type="text" name="website" id="website">
             <button type="submit">Send Message</button>
         </form>
         </div>
