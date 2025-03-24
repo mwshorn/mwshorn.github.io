@@ -377,6 +377,25 @@ form input, form textarea {
     display: none;
 }
 
+.submit-btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #f5f5f5;
+    color: #333;
+    border: 1px solid #f5f5f5;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 0.95rem;
+    transition: background-color 0.3s, border-color 0.3s;
+    cursor: pointer;
+  }
+  
+  .submit-btn:hover,
+  .submit-btn:focus {
+    background-color: #f5f5f5;
+    border-color: #999;
+  }
+
 button {
     width: 100%;
     padding: 10px;
