@@ -127,24 +127,12 @@
 
             <input type="submit" class="submit-btn" name="" value="Send Message"></input>
         </form>
-
+        <p id="thank-you" style="display:none">Thanks! Your message has been sent to Matt.</p>
         <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){}"></iframe>
     </div>
         
 </footer>
 </div>
 <script src="script.js"></script>
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"
-  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-  crossorigin="anonymous"></script>
-<script type="text/javascript">
-    var submitted = false;
-</script>
-<script type="text/javascript">
-    $('#gform').on('submit', function(e){
-        $('#gform *').fadeout(2000);
-        $('#gform').prepend('Your message has been sent to Matt.');
-    });
-</script>
 </body>
 </html>

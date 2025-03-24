@@ -72,3 +72,14 @@ document.addEventListener("keydown", function(event) {
         valveOneReturn();
     }
   });
+
+  // After contact form submission, show the thank-you message
+
+let submitted = false;
+
+document.getElementById('hidden_iframe').onload = function () {
+  if (submitted) {
+    document.getElementById('gForm').style.display = 'none';
+    document.getElementById('thank-you').style.display = 'block';
+  }
+};
