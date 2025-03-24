@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="../../reset.css">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-...your-integrity-code..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Prism.js (Dark Theme: Tomorrow Night) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+
+
+</head>
+<body>
+    <nav class="mobile-nav" id="id1">
+        <ul class="mobile-nav-items">
+            <li class="mobile-nav-item" type="button"
+            onclick="document.getElementById('id1').style.display = 'none'; document.body.style.overflowY = 'auto'"><a href="../../index.html#bio">Bio</a></li>
+            <li class="mobile-nav-item" type="button"
+            onclick="document.getElementById('id1').style.display = 'none'; document.body.style.overflowY = 'auto'"><a href="../../index.html#projects">Projects</a></li>
+            <li class="mobile-nav-item" type="button"
+            onclick="document.getElementById('id1').style.display = 'none'; document.body.style.overflowY = 'auto'"><a href="../index.html">Blog</a></li>
+            <li class="mobile-nav-item" type="button"
+            onclick="document.getElementById('id1').style.display = 'none'; document.body.style.overflowY = 'auto'"><a href='../../index.html#contact'>Contact</a></li>
+            <li class="mobile-nav-item" type="button"
+            onclick="document.getElementById('id1').style.display = 'none'; document.body.style.overflowY = 'auto'" id="click-me">x</li>
+          </ul>
+    </nav>
+
+    <div class="content">
+        <nav class="nav-bar">
+            <div class="logo-container">
+            <h1 id="logo">dev.matthorn.net</h1>
+            </div>
+            <div class="nav-container">
+            <i class="fa fa-bars" id="menu-bars" aria-hidden="true" type="button"
+            onclick="document.getElementById('id1').style.display = 'block'; document.body.style.overflowY = 'hidden'"></i>
+            <ul class="navigation-items">
+              <li class="navigation-item"><a href="../../index.html#bio">Bio</a></li>
+              <li class="navigation-item"><a href="../../index.html#projects">Projects</a></li>
+              <li class="navigation-item"><a href="../index.html">Blog</a></li>
+              <li class="navigation-item"><a href='../../index.html#contact'>Contact</a></li>
+            </ul>
+            </div>
+        </nav>
+
+        <main id="blog"> 
+        <article>
+            <h1 id='building-a-custom-contact-form-on-github-pages-with-google-forms-and-apps-script'>Building a Custom Contact Form on GitHub Pages with Google Forms and Apps Script</h1>
+            <p>Creating a contact form on a static site came with some challenges, especially as I wanted to keep my email address private but still direct complete submissions instantly to my inbox.</p>
+            <p>I have arrived at a solution which does everything I set out to do (and more), and this post walks through my thinking as I worked towards a fully functional and cleanly styled contact form that works seamlessly on GitHub Pages using <strong>Google Forms</strong> and <strong>Apps Script</strong>.</p>
+            <hr />
+            <h2 id='🧠-reflect-what-was-i-trying-to-do'>🧠 Reflect: What Was I Trying to Do?</h2>
+            <p>I wanted to add a working <strong>contact form</strong> to my static site hosted on <strong>GitHub Pages</strong>. My goals were:</p>
+            <ul>
+                <li>Collect messages from visitors</li>
+                <li>Keep my email address private</li>
+                <li>Receive full submissions directly in my inbox</li>
+                <li>Avoid any using paid services</li>
+            </ul>
+
+            <p>During the process, I asked a few key questions.</p>
+            <hr />
+            <h2 id='❓-determine-the-questions-i-asked'>❓ Determine: The Questions I Asked</h2>
+            <h3 id='1-how-can-i-add-a-form-that-sends-to-my-email-without-exposing-it'>1. How can I add a form that sends to my email without exposing it?</h3>
+            <p>I initially thought about using a send.PHP file, and hiding my private email address in a hidden .env file, however hosting the site on GitHub Pages meant I couldn’t run PHP or backend code, so I needed a purely frontend solution. I explored options like <strong>Formsubmit</strong>, but ran into issues around domain verification.</p>
+            <h3 id='2-how-can-i-integrate-a-custom-form-with-a-google-form-backend'>2. How can I integrate a custom form with a Google Form backend?</h3>
+            <p>I discovered on youtube that I could use a regular <code>&lt;form&gt;</code> and submit directly to a hidden Google Form. Every input field has a unique ID like <code>entry.123456</code>, and by matching those in my custom form, the data would be sent to Google and fill in my linked Google Sheet.</p>
+            <h3 id='3-how-can-i-avoid-the-google-form-thank-you-redirect'>3. How can I avoid the Google Form thank-you redirect?</h3>
+            <p>I set the <code>target</code> of the form to a hidden <code>&lt;iframe&gt;</code>. This meant the user would stay on my static page even after submitting — thus avoiding redirection to Google&#39;s clunky thank you page.</p>
+            
+            <pre><code class="language-markup">&lt;form action="https://docs.google.com/forms/..." target="hidden_iframe" onsubmit="submitted=true;"&gt;
+                ...
+              &lt;/form&gt;
+              &lt;iframe name="hidden_iframe" style="display:none;"&gt;&lt;/iframe&gt;</code></pre>
+              
+
+            <p><strong>4. How can I be notified when someone contacts me?</strong> </p>
+            <p>Initially, I used the built in notifications - but in order to view the message I still had to open the spreadsheet and take a look. I used an AI tool to write a Google Apps Script that would use a sendEmail function using placeholders from the spreadsheet, so that the completed form would arrive in my private email inbox immediately. </p>
+            <p><strong>5. How can I avoid getting spam from this form?</strong></p>
+            <p>I added a <strong>honeypot field</strong> — a hidden input on my form that bots might fill out, but is not displayed to real users. My Apps Script checks that field and ignores submissions that have written anything in that field.</p>
+            <hr />
+            <h2 id='🔁-refine-what-improvements-could-i-make'>🔁 Refine: what improvements could I make?</h2>
+            <p>Despite enjoying the minimalist aesthetic, there are still animations that I could incorporate into my form for a smoother and more elegant user experience. On my own end, I&#39;d love to format the HTML of the email I receive to improve readability.</p>
+            <hr />
+            <h2 id='conclusion'>Conclusion</h2>
+            <p>I am really happy that in seeking to find a free and secure way of receiving messages without exposes my email address publicly in my code - this actually led me to a flexible and reliable solution where I am able to control both the front and the back end development.</p>
+            <p>What started as a simple project — adding a contact form — turned out to be a rewarding problem-solving process. Best of all, it&#39;s all built with just <strong>HTML</strong>, <strong>CSS</strong>, <strong>DOM using JavaScript</strong>, and <strong>free google tools</strong> that I was already already using.</p>
+            <p><em>I&#39;d love to hear if anyone reading this has any feedback or questions on this contact form project? Drop me a message (using mine 😄) — I’d be delighted to help!</em></p>
+        </article>
+        </main>
+</div>
+<script src="../script.js"></script>
+</body>
