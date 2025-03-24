@@ -112,8 +112,7 @@
     <div class="contact-form" id="contact">
         <h2>Contact Me</h2>
         <form id="gForm" name="gform" target="hidden_iframe" onsubmit="submitted=true;" 
-        action="https://docs.google.com/forms/d/e/1FAIpQLSdMg21FBmCqdRhE0YQlmI3nmkWwWR5-
-        Q5hBGZuIhgyVezodeg/formResponse" method="POST">
+        action="https://docs.google.com/forms/d/e/1FAIpQLSdMg21FBmCqdRhE0YQlmI3nmkWwWR5-Q5hBGZuIhgyVezodeg/formResponse?" method="POST">
 
             <label for="entry.2035188007">Name</label>
             <input type="text" id="entry.2035188007" name="entry.2035188007" placeholder="(required)" required>
@@ -136,8 +135,7 @@
 </footer>
 </div>
 <script src="script.js"></script>
-<script
-  src="https://code.jquery.com/jquery-3.7.1.min.js"
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
   integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
   crossorigin="anonymous"></script>
 <script type="text/javascript">
@@ -145,7 +143,7 @@
 </script>
 <script type="text/javascript">
     $('#gform').on('submit', function(e){
-        $('gform *').fadeout(2000);
+        $('#gform *').fadeout(2000);
         $('#gform').prepend('Your message has been sent to Matt.');
     });
 </script>
